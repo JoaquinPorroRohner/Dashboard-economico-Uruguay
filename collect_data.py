@@ -19,13 +19,96 @@ GitHub Actions (ver .github/workflows/actualizar-datos.yml), pero también
 se puede correr a mano con: python collect_data.py
 """
 import json
+import os
+import ssl
 import sys
+import tempfile
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+
+def preparar_certificados():
+    """Arregla el error 'CERTIFICATE_VERIFY_FAILED' con las webs del Estado.
+
+    El problema: los sitios del INE y del BCU publican su certificado de
+    seguridad de forma incompleta (les falta un eslabón intermedio de la
+    cadena). Los navegadores lo disimulan, pero Python es estricto y por eso
+    rechaza la conexión.
+
+    La solución: la librería econuy trae guardados esos certificados que
+    faltan. Acá los juntamos con los que Python ya conoce y armamos un
+    paquete único que usan tanto pandas como httpx (las dos formas en que
+    este script se conecta).
+
+    IMPORTANTE: esto NO desactiva ninguna verificación de seguridad. Solo
+    completa la información que los sitios oficiales publican mal. Las
+    conexiones se siguen verificando igual que siempre.
+    """
+    # 1) Los certificados oficiales uruguayos que faltan (los trae econuy).
+    certificados_uruguayos = []
+    try:
+        from econuy.utils.retrieval import get_certs_path
+        for fuente in ("bcu", "ine", "inac", "bcra"):
+            ruta = Path(get_certs_path(fuente))
+            if ruta.exists():
+                certificados_uruguayos.append(ruta)
+    except Exception as e:
+        print(f"  Aviso: no se encontraron los certificados oficiales ({e})")
+
+    if not certificados_uruguayos:
+        print("  Aviso: sigo sin certificados extra, puede haber errores de SSL")
+        return
+
+    # 2) El contexto para pandas/urllib: partimos de los certificados que ya
+    #    tiene el sistema (así no rompemos nada de lo que ya funcionaba) y
+    #    les SUMAMOS los uruguayos.
+    contexto = ssl.create_default_context()
+    for ruta in certificados_uruguayos:
+        contexto.load_verify_locations(cafile=str(ruta))
+    ssl._create_default_https_context = lambda *a, **kw: contexto
+
+    # 3) httpx no usa ese contexto, sino un archivo indicado por variable de
+    #    entorno. Armamos un paquete que junta TODO: los del sistema, los de
+    #    certifi y los uruguayos.
+    partes = []
+    rutas_sistema = ssl.get_default_verify_paths()
+    candidatos = [
+        rutas_sistema.cafile,
+        rutas_sistema.openssl_cafile,
+        "/etc/ssl/certs/ca-certificates.crt",
+    ]
+    try:
+        import certifi
+        candidatos.append(certifi.where())
+    except Exception:
+        pass
+
+    ya_agregados = set()
+    for candidato in candidatos:
+        if not candidato:
+            continue
+        p = Path(candidato)
+        if p.exists() and p.resolve() not in ya_agregados:
+            ya_agregados.add(p.resolve())
+            partes.append(p.read_bytes())
+    for ruta in certificados_uruguayos:
+        partes.append(ruta.read_bytes())
+
+    paquete = Path(tempfile.gettempdir()) / "certificados_uruguay.pem"
+    paquete.write_bytes(b"\n".join(partes))
+    os.environ["SSL_CERT_FILE"] = str(paquete)
+    os.environ["REQUESTS_CA_BUNDLE"] = str(paquete)
+
+    print(f"  Certificados listos ({len(contexto.get_ca_certs())} autoridades, "
+          f"{len(certificados_uruguayos)} paquetes oficiales sumados)")
+
+
+print("Preparando conexión segura con los sitios oficiales...")
+preparar_certificados()
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from indicadores import INDICADORES  # noqa: E402
