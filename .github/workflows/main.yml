@@ -1,0 +1,44 @@
+name: Actualizar datos económicos
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar Chrome (necesario para 3 de los indicadores)
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chromedriver: "true"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Recolectar datos oficiales (BCU / INE / MEF)
+        run: python collect_data.py
+
+      - name: Guardar los datos nuevos en el repositorio
+        run: |
+          git config user.name "Actualizador automatico"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No hay datos nuevos hoy."
+          else
+            git commit -m "Actualizacion automatica de datos"
+            git push
+          fi
