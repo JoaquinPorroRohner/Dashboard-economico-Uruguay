@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Panel Económico de Uruguay</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --page:        #0d0d0d;
+    --surface-1:   #1a1a19;
+    --surface-2:   #232322;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:    #2c2c2a;
+    --baseline:    #383835;
+    --border:      rgba(255,255,255,0.10);
+    --series-1:    #3987e5; /* blue - único color de línea, la identidad la da el texto */
+    --status-good:     #0ca30c;
+    --status-warning:  #fab219;
+    --status-critical: #d03b3b;
+    --status-good-bg:     rgba(12,163,12,0.14);
+    --status-warning-bg:  rgba(250,178,25,0.14);
+    --status-critical-bg: rgba(208,59,59,0.16);
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    height: 100%;
+  }
+
+  #app { display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-1);
+  }
+  header h1 { font-size: 28px; margin: 0; font-weight: 700; letter-spacing: 0.2px; }
+  header .subtitulo { color: var(--text-secondary); font-size: 15px; margin-top: 4px; }
+  #reloj { text-align: right; font-size: 15px; color: var(--text-secondary); }
+  #reloj .hora { font-size: 26px; color: var(--text-primary); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* ---------- Selector de período ---------- */
+  #periodos {
+    display: flex; gap: 8px; padding: 14px 32px;
+    background: var(--page);
+  }
+  #periodos button {
+    background: var(--surface-2); color: var(--text-secondary);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 18px; font-size: 15px; cursor: pointer;
+    font-family: inherit;
+  }
+  #periodos button.activo {
+    background: var(--series-1); color: #ffffff; border-color: var(--series-1);
+    font-weight: 600;
+  }
+  #periodos .auto-indicador {
+    margin-left: auto; align-self: center; color: var(--text-muted); font-size: 13px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .punto-pagina {
+    width: 9px; height: 9px; border-radius: 50%; background: var(--surface-2);
+    border: 1px solid var(--border); display: inline-block; cursor: pointer;
+  }
+  .punto-pagina.activo { background: var(--series-1); border-color: var(--series-1); }
+
+  /* ---------- Grid de categorías ---------- */
+  main { flex: 1; padding: 4px 32px 10px; }
+  .categoria { margin-bottom: 12px; }
+  .categoria h2 {
+    font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-muted); font-weight: 600; margin: 0 0 10px 2px;
+  }
+  .grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 14px;
+  }
+
+  /* ---------- Tarjeta de indicador ---------- */
+  .tarjeta {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .tarjeta .fila-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 10px; margin-bottom: 6px;
+  }
+  .tarjeta .nombre { font-size: 15px; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+  .tarjeta .unidad { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .badge-estado {
+    flex-shrink: 0;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    padding: 4px 9px; border-radius: 20px; letter-spacing: 0.03em;
+    display: flex; align-items: center; gap: 5px; white-space: nowrap;
+  }
+  .badge-estado.Normal   { background: var(--status-good-bg);     color: var(--status-good); }
+  .badge-estado.Atención { background: var(--status-warning-bg);  color: var(--status-warning); }
+  .badge-estado.Alerta   { background: var(--status-critical-bg); color: var(--status-critical); }
+  .badge-estado.sin-datos { background: var(--surface-2); color: var(--text-muted); }
+  .badge-estado .punto { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+  .badge-mercado {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    color: var(--text-muted); border: 1px solid var(--border);
+    padding: 2px 7px; border-radius: 20px; margin-left: 6px; letter-spacing: 0.04em;
+  }
+
+  .valor-actual { display: flex; align-items: baseline; gap: 10px; margin: 10px 0 4px; }
+  .valor-actual .numero { font-size: 32px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .valor-actual .delta { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .delta.positivo { color: var(--status-good); }
+  .delta.negativo { color: var(--status-critical); }
+  .delta.neutro   { color: var(--text-muted); }
+
+  .fecha-dato { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+
+  svg.grafico { width: 100%; height: 70px; display: block; }
+  svg.grafico .linea { fill: none; stroke: var(--series-1); stroke-width: 2px; }
+  svg.grafico .area  { fill: var(--series-1); opacity: 0.08; }
+  svg.grafico .grid  { stroke: var(--gridline); stroke-width: 1px; }
+
+  .pie-tarjeta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-muted);
+  }
+  .pie-tarjeta a { color: var(--text-muted); }
+
+  .vacio { color: var(--text-muted); font-size: 13px; padding: 20px 0; text-align: center; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 14px 32px; border-top: 1px solid var(--border);
+    background: var(--surface-1); color: var(--text-muted); font-size: 12px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  footer .metodologia span { margin-right: 16px; }
+  footer .metodologia .punto { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div>
+      <h1>Panel Económico de Uruguay</h1>
+      <div class="subtitulo">Indicadores oficiales — INE · BCU · MEF</div>
+    </div>
+    <div id="reloj">
+      <div class="hora" id="hora">--:--</div>
+      <div id="fecha">--</div>
+    </div>
+  </header>
+
+  <div id="periodos">
+    <button data-periodo="12m">Últimos 12 meses</button>
+    <button data-periodo="3a">Últimos 3 años</button>
+    <button data-periodo="5a">Últimos 5 años</button>
+    <button data-periodo="todo">Histórico completo</button>
+    <span class="auto-indicador" id="paginas"></span>
+  </div>
+
+  <main id="contenido">
+    <div class="vacio">Cargando datos...</div>
+  </main>
+
+  <footer>
+    <div class="metodologia">
+      <span><span class="punto" style="background:var(--status-good)"></span>Normal</span>
+      <span><span class="punto" style="background:var(--status-warning)"></span>Atención</span>
+      <span><span class="punto" style="background:var(--status-critical)"></span>Alerta</span>
+      <span style="margin-left:6px;">— estado calculado automáticamente según cuánto se aleja el último dato del comportamiento histórico de esa serie</span>
+    </div>
+    <div id="pie-actualizacion">Actualizando...</div>
+  </footer>
+</div>
+
+<script>
+// ==========================================================================
+// Panel Económico de Uruguay — lee los archivos /data/<indicador>.json
+// (generados por scripts/collect_data.py vía GitHub Actions) y los dibuja.
+// No depende de ninguna librería externa: todo el gráfico es SVG a mano.
+// ==========================================================================
+
+// "subir" indica qué significa, para una empresa uruguaya típica, que este
+// indicador SUBA: "bueno", "malo" o "neutro" (depende del contexto, ej. el
+// tipo de cambio). Se usa solo para pintar la variación interanual con el
+// color correcto — el estado Normal/Atención/Alerta es aparte y siempre
+// estadístico/objetivo, no depende de esta interpretación.
+const INDICADORES = [
+  { id: "inflacion_ipc",            categoria: "Precios",             subir: "malo" },
+  { id: "ui",                       categoria: "Precios",             subir: "neutro" },
+  { id: "expectativas_inflacion",   categoria: "Precios",             subir: "malo" },
+  { id: "tipo_cambio",              categoria: "Cambiario",           subir: "neutro" },
+  { id: "tipo_cambio_real",         categoria: "Cambiario",           subir: "neutro" },
+  { id: "actividad",                categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "empleo",                   categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "desempleo",                categoria: "Mercado laboral",     subir: "malo" },
+  { id: "salario_real",             categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "pib",                      categoria: "Actividad económica", subir: "bueno" },
+  { id: "imae",                     categoria: "Actividad económica", subir: "bueno" },
+  { id: "consumo_privado",          categoria: "Actividad económica", subir: "bueno" },
+  { id: "resultado_fiscal",         categoria: "Fiscal",              subir: "bueno" },
+  { id: "deuda_publica",            categoria: "Fiscal",              subir: "malo" },
+  { id: "tasa_politica_monetaria",  categoria: "Financiero",          subir: "neutro" },
+  { id: "riesgo_pais",              categoria: "Financiero",          subir: "malo" },
+];
+const SUBIR_POR_ID = Object.fromEntries(INDICADORES.map(d => [d.id, d.subir]));
+
+const ORDEN_CATEGORIAS = ["Precios", "Cambiario", "Mercado laboral", "Actividad económica", "Fiscal", "Financiero"];
+// La pantalla de la TV no alcanza para mostrar las 6 categorías a la vez sin
+// achicar todo hasta hacerlo ilegible, así que se van turnando solas cada
+// 15 segundos en 2 páginas. El período (12m/3a/5a/todo) en cambio queda fijo
+// en lo que se elija, para no marear con dos cosas cambiando a la vez.
+const PAGINAS = [
+  ["Precios", "Cambiario", "Mercado laboral"],
+  ["Actividad económica", "Fiscal", "Financiero"],
+];
+const PERIODOS = ["12m", "3a", "5a", "todo"];
+let periodoActual = "12m";
+let paginaActual = 0;
+let cacheDatos = {};
+
+function mesesPorPeriodo(p) {
+  return { "12m": 12, "3a": 36, "5a": 60, "todo": Infinity }[p];
+}
+
+function filtrarPorPeriodo(historial, periodo) {
+  const n = mesesPorPeriodo(periodo);
+  if (n === Infinity) return historial;
+  // Aproximación simple: tomamos los últimos N puntos si es mensual/trimestral,
+  // o los últimos N*30 días si la serie es diaria (más de ~800 puntos en 3 años).
+  const esDiaria = historial.length > 400 && periodo !== "todo";
+  if (esDiaria) {
+    const dias = { "12m": 365, "3a": 365 * 3, "5a": 365 * 5 }[periodo];
+    return historial.slice(-dias);
+  }
+  return historial.slice(-n);
+}
+
+function formatearNumero(valor, unidad) {
+  if (valor === null || valor === undefined || isNaN(valor)) return "—";
+  const decimales = Math.abs(valor) >= 1000 ? 0 : (Math.abs(valor) >= 100 ? 1 : 2);
+  return valor.toLocaleString("es-UY", { minimumFractionDigits: decimales, maximumFractionDigits: decimales });
+}
+
+function dibujarSparkline(historialFiltrado) {
+  const valores = historialFiltrado.map(r => r.valor);
+  if (valores.length < 2) {
+    return '<div class="vacio" style="padding:20px 0;">Todavía no hay suficientes datos para graficar</div>';
+  }
+  const w = 600, h = 70, pad = 4;
+  const min = Math.min(...valores), max = Math.max(...valores);
+  const rango = (max - min) || 1;
+  const puntos = valores.map((v, i) => {
+    const x = pad + (i / (valores.length - 1)) * (w - pad * 2);
+    const y = pad + (1 - (v - min) / rango) * (h - pad * 2);
+    return [x, y];
+  });
+  const lineaPath = puntos.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+  const areaPath = lineaPath + ` L${puntos[puntos.length-1][0].toFixed(1)},${h-pad} L${puntos[0][0].toFixed(1)},${h-pad} Z`;
+  return `<svg class="grafico" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <line class="grid" x1="0" y1="${h-pad}" x2="${w}" y2="${h-pad}"></line>
+    <path class="area" d="${areaPath}"></path>
+    <path class="linea" d="${lineaPath}"></path>
+  </svg>`;
+}
+
+function iconoBadge(estado) {
+  return `<span class="badge-estado ${estado || 'sin-datos'}"><span class="punto"></span>${estado || 'Sin datos'}</span>`;
+}
+
+function tarjetaIndicador(def, datos) {
+  if (!datos) {
+    return `<div class="tarjeta">
+      <div class="fila-top"><div class="nombre">${def.id}</div></div>
+      <div class="vacio">Todavía no se recolectó este indicador (esperando la primera corrida automática)</div>
+    </div>`;
+  }
+
+  const hist = filtrarPorPeriodo(datos.historial, periodoActual);
+  const ultimo = datos.historial[datos.historial.length - 1];
+  const estado = datos.estado_actual || {};
+  const deltaInteranual = estado.variacion_interanual_pct;
+
+  let deltaHtml = "";
+  if (deltaInteranual !== null && deltaInteranual !== undefined) {
+    const subir = SUBIR_POR_ID[def.id] || "neutro";
+    let clase = "neutro";
+    if (subir !== "neutro" && deltaInteranual !== 0) {
+      const esMovimientoBueno = (subir === "bueno") === (deltaInteranual > 0);
+      clase = esMovimientoBueno ? "positivo" : "negativo";
+    }
+    const signo = deltaInteranual > 0 ? "+" : "";
+    deltaHtml = `<span class="delta ${clase}">${signo}${deltaInteranual}% interanual</span>`;
+  }
+
+  const badgeMercado = datos.fuente_tipo === "mercado" ? '<span class="badge-mercado">Fuente de mercado</span>' : "";
+
+  return `<div class="tarjeta">
+    <div class="fila-top">
+      <div>
+        <div class="nombre">${datos.nombre}${badgeMercado}</div>
+        <div class="unidad">${datos.unidad}</div>
+      </div>
+      ${iconoBadge(estado.estado)}
+    </div>
+    <div class="valor-actual">
+      <span class="numero">${formatearNumero(ultimo.valor, datos.unidad)}</span>
+      ${deltaHtml}
+    </div>
+    <div class="fecha-dato">Dato al ${ultimo.fecha} · fuente: ${datos.fuente_organismo}</div>
+    ${dibujarSparkline(hist)}
+    <div class="pie-tarjeta">
+      <span>${datos.fuente_url ? `<a href="${datos.fuente_url}" target="_blank" rel="noopener">Ver fuente oficial ↗</a>` : ''}</span>
+      <span>Act.: ${datos.ultima_actualizacion ? datos.ultima_actualizacion.split(' ')[0] : '—'}</span>
+    </div>
+  </div>`;
+}
+
+async function cargarDatos() {
+  const promesas = INDICADORES.map(async (def) => {
+    try {
+      const resp = await fetch(`data/${def.id}.json?_=${Date.now()}`);
+      if (!resp.ok) return [def.id, null];
+      return [def.id, await resp.json()];
+    } catch (e) {
+      return [def.id, null];
+    }
+  });
+  const resultados = await Promise.all(promesas);
+  cacheDatos = Object.fromEntries(resultados);
+}
+
+function render() {
+  const contenido = document.getElementById("contenido");
+  const porCategoria = {};
+  for (const def of INDICADORES) {
+    (porCategoria[def.categoria] ||= []).push(def);
+  }
+
+  let html = "";
+  for (const categoria of PAGINAS[paginaActual]) {
+    const defs = porCategoria[categoria];
+    if (!defs) continue;
+    html += `<section class="categoria"><h2>${categoria}</h2><div class="grid-tarjetas">`;
+    for (const def of defs) {
+      html += tarjetaIndicador(def, cacheDatos[def.id]);
+    }
+    html += `</div></section>`;
+  }
+  contenido.innerHTML = html;
+
+  document.querySelectorAll("#periodos button").forEach(b => {
+    b.classList.toggle("activo", b.dataset.periodo === periodoActual);
+  });
+
+  const puntos = document.getElementById("paginas");
+  puntos.innerHTML = "Página " + (paginaActual + 1) + "/" + PAGINAS.length + " &nbsp; " +
+    PAGINAS.map((_, i) => `<span class="punto-pagina${i === paginaActual ? ' activo' : ''}" data-pagina="${i}"></span>`).join("");
+  puntos.querySelectorAll(".punto-pagina").forEach(p => {
+    p.addEventListener("click", () => { paginaActual = Number(p.dataset.pagina); render(); });
+  });
+
+  // Pie de página: última actualización real más reciente entre todos los indicadores
+  const actualizaciones = Object.values(cacheDatos).filter(Boolean).map(d => d.ultima_actualizacion).filter(Boolean);
+  const pie = document.getElementById("pie-actualizacion");
+  pie.textContent = actualizaciones.length
+    ? `Última actualización de datos: ${actualizaciones.sort().reverse()[0]}`
+    : "Todavía no hay datos recolectados — esperando la primera corrida automática";
+}
+
+function actualizarReloj() {
+  const ahora = new Date();
+  document.getElementById("hora").textContent = ahora.toLocaleTimeString("es-UY", { hour: "2-digit", minute: "2-digit" });
+  document.getElementById("fecha").textContent = ahora.toLocaleDateString("es-UY", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+}
+
+function fijarPeriodo(p) {
+  periodoActual = p;
+  render();
+}
+
+document.querySelectorAll("#periodos button").forEach(b => {
+  b.addEventListener("click", () => fijarPeriodo(b.dataset.periodo));
+});
+
+// Como la TV no tiene mouse/teclado la mayor parte del tiempo, el panel va
+// turnando solo entre las páginas de categorías cada 15 segundos, para que
+// las 16 tarjetas se terminen viendo todas sin necesidad de hacer scroll.
+setInterval(() => {
+  paginaActual = (paginaActual + 1) % PAGINAS.length;
+  render();
+}, 15000);
+
+// Refrescamos los datos cada 10 minutos (el commit automático es 1 vez al
+// día, pero así la TV siempre refleja lo último sin necesidad de recargar
+// la página a mano).
+async function ciclo() {
+  await cargarDatos();
+  render();
+}
+ciclo();
+setInterval(ciclo, 10 * 60 * 1000);
+actualizarReloj();
+setInterval(actualizarReloj, 30000);
+</script>
+</body>
+</html>

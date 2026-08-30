@@ -1,0 +1,5 @@
+econuy
+pandas
+numpy
+openpyxl
+selenium
