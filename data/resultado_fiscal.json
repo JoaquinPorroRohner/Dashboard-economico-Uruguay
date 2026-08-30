@@ -1,0 +1,1669 @@
+{
+  "id": "resultado_fiscal",
+  "nombre": "Resultado fiscal (Sector Público No Financiero)",
+  "categoria": "Fiscal",
+  "unidad": "Millones de UYU, acumulado últimos 12 meses",
+  "fuente_tipo": "oficial",
+  "fuente_organismo": "MEF / BCU",
+  "fuente_url": "https://www.gub.uy/ministerio-economia-finanzas/datos-y-estadisticas/datos/informacion-resultados-del-sector-publico",
+  "nota": "",
+  "ultima_actualizacion": "2026-08-30 17:25:59 UTC",
+  "estado_actual": {
+    "estado": "Normal",
+    "z_score": -0.13,
+    "variacion_periodo_pct": -199.71,
+    "variacion_interanual_pct": 10.01
+  },
+  "historial": [
+    {
+      "fecha": "1999-01-31",
+      "valor": 174.3635,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-02-28",
+      "valor": -304.0668,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-03-31",
+      "valor": -544.419,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-04-30",
+      "valor": -532.6471,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-05-31",
+      "valor": -169.157,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-06-30",
+      "valor": -998.6384,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-07-31",
+      "valor": -1217.8074,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-08-31",
+      "valor": -419.0664,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-09-30",
+      "valor": -442.3726,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-10-31",
+      "valor": -615.5773,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-11-30",
+      "valor": -505.5271,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "1999-12-31",
+      "valor": -2615.9133,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-01-31",
+      "valor": -308.2004,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-02-29",
+      "valor": -970.002,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-03-31",
+      "valor": -989.0606,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-04-30",
+      "valor": -684.3619,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-05-31",
+      "valor": -500.4547,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-06-30",
+      "valor": -672.8689,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-07-31",
+      "valor": -1219.1761,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-08-31",
+      "valor": 361.2856,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-09-30",
+      "valor": -976.5886,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-10-31",
+      "valor": -479.8023,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-11-30",
+      "valor": -462.832,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2000-12-31",
+      "valor": -1407.7814,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-01-31",
+      "valor": 19.5468,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-02-28",
+      "valor": -819.081,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-03-31",
+      "valor": -456.6865,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-04-30",
+      "valor": -222.6329,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-05-31",
+      "valor": -589.3286,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-06-30",
+      "valor": -1793.3354,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-07-31",
+      "valor": -1300.4281,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-08-31",
+      "valor": 34.8311,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-09-30",
+      "valor": -1300.5501,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-10-31",
+      "valor": -360.7345,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-11-30",
+      "valor": -854.1702,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2001-12-31",
+      "valor": -1018.9566,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-01-31",
+      "valor": -356.1608,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-02-28",
+      "valor": -941.9542,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-03-31",
+      "valor": -527.4946,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-04-30",
+      "valor": -907.2888,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-05-31",
+      "valor": -262.7381,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-06-30",
+      "valor": -486.4098,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-07-31",
+      "valor": -2607.5071,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-08-31",
+      "valor": -694.5908,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-09-30",
+      "valor": -950.6724,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-10-31",
+      "valor": -1181.5112,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-11-30",
+      "valor": -1199.0204,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2002-12-31",
+      "valor": 60.523,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-01-31",
+      "valor": -672.8965,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-02-28",
+      "valor": -3797.4133,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-03-31",
+      "valor": 2245.0552,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-04-30",
+      "valor": -1033.257,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-05-31",
+      "valor": -4736.1378,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-06-30",
+      "valor": 712.6454,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-07-31",
+      "valor": -721.2504,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-08-31",
+      "valor": -794.1571,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-09-30",
+      "valor": 485.8158,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-10-31",
+      "valor": -285.3312,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-11-30",
+      "valor": -843.4039,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2003-12-31",
+      "valor": 1308.3562,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-01-31",
+      "valor": -948.5529,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-02-29",
+      "valor": -1376.4176,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-03-31",
+      "valor": 296.7869,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-04-30",
+      "valor": -26.6868,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-05-31",
+      "valor": -1060.2346,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-06-30",
+      "valor": 1581.381,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-07-31",
+      "valor": -1935.931,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-08-31",
+      "valor": 346.8914,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-09-30",
+      "valor": 614.6633,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-10-31",
+      "valor": -2503.8228,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-11-30",
+      "valor": 14.4214,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2004-12-31",
+      "valor": 1276.928,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-01-31",
+      "valor": 614.0783,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-02-28",
+      "valor": -1102.4969,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-03-31",
+      "valor": -1316.556,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-04-30",
+      "valor": -771.1404,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-05-31",
+      "valor": 767.3103,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-06-30",
+      "valor": -127.1776,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-07-31",
+      "valor": 489.0568,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-08-31",
+      "valor": -1378.1888,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-09-30",
+      "valor": -369.4592,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-10-31",
+      "valor": 593.7515,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-11-30",
+      "valor": -68.5365,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2005-12-31",
+      "valor": 1390.8047,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-01-31",
+      "valor": 723.5264,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-02-28",
+      "valor": -809.5282,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-03-31",
+      "valor": 101.6768,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-04-30",
+      "valor": 413.4684,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-05-31",
+      "valor": -363.0834,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-06-30",
+      "valor": -2737.5832,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-07-31",
+      "valor": 1068.6755,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-08-31",
+      "valor": -917.1965,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-09-30",
+      "valor": -1687.8833,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-10-31",
+      "valor": 574.6368,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-11-30",
+      "valor": -259.5131,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2006-12-31",
+      "valor": 586.8966,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-01-31",
+      "valor": 1819.319,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-02-28",
+      "valor": 1716.0966,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-03-31",
+      "valor": -4882.3995,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-04-30",
+      "valor": 7348.4755,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-05-31",
+      "valor": -981.5166,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-06-30",
+      "valor": -2805.3801,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-07-31",
+      "valor": 885.5179,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-08-31",
+      "valor": 1584.9619,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-09-30",
+      "valor": -1387.4926,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-10-31",
+      "valor": 279.2809,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-11-30",
+      "valor": 2186.436,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2007-12-31",
+      "valor": -6702.9379,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-01-31",
+      "valor": 6303.1827,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-02-29",
+      "valor": 2499.5166,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-03-31",
+      "valor": -3986.7006,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-04-30",
+      "valor": -2213.7326,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-05-31",
+      "valor": -616.7328,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-06-30",
+      "valor": -1054.7129,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-07-31",
+      "valor": -2909.0983,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-08-31",
+      "valor": 1863.3289,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-09-30",
+      "valor": -1729.7,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-10-31",
+      "valor": 2299.3402,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-11-30",
+      "valor": 102.0586,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2008-12-31",
+      "valor": -9616.5168,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-01-31",
+      "valor": 4846.3324,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-02-28",
+      "valor": -310.9361,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-03-31",
+      "valor": -3638.801,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-04-30",
+      "valor": 1255.5647,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-05-31",
+      "valor": -2480.9105,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-06-30",
+      "valor": -3452.8839,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-07-31",
+      "valor": -1717.4084,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-08-31",
+      "valor": -188.4851,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-09-30",
+      "valor": -1197.0616,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-10-31",
+      "valor": 761.1024,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-11-30",
+      "valor": 1866.243,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2009-12-31",
+      "valor": -6607.0222,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-01-31",
+      "valor": 8069.1717,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-02-28",
+      "valor": 747.508,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-03-31",
+      "valor": -8982.9831,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-04-30",
+      "valor": 11345.6941,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-05-31",
+      "valor": -4045.2587,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-06-30",
+      "valor": -5488.6303,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-07-31",
+      "valor": 1243.8381,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-08-31",
+      "valor": 91.7776,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-09-30",
+      "valor": -2817.3117,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-10-31",
+      "valor": -823.9007,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-11-30",
+      "valor": 5310.8816,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2010-12-31",
+      "valor": -8065.0821,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-01-31",
+      "valor": 6845.2538,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-02-28",
+      "valor": 1073.0553,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-03-31",
+      "valor": -4269.0138,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-04-30",
+      "valor": 4260.8526,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-05-31",
+      "valor": -2002.3528,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-06-30",
+      "valor": -3925.6789,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-07-31",
+      "valor": -833.9601,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-08-31",
+      "valor": 1778.2801,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-09-30",
+      "valor": 1005.637,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-10-31",
+      "valor": 853.9209,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-11-30",
+      "valor": -682.1634,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2011-12-31",
+      "valor": -7477.225,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-01-31",
+      "valor": 3224.6343,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-02-29",
+      "valor": -272.0818,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-03-31",
+      "valor": -15399.742,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-04-30",
+      "valor": 13545.0611,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-05-31",
+      "valor": -1521.2456,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-06-30",
+      "valor": -8820.8676,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-07-31",
+      "valor": -3574.8605,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-08-31",
+      "valor": -683.2355,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-09-30",
+      "valor": -4572.4676,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-10-31",
+      "valor": -551.0848,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-11-30",
+      "valor": 3414.6928,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2012-12-31",
+      "valor": -9469.8632,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-01-31",
+      "valor": 3279.7219,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-02-28",
+      "valor": -1563.9886,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-03-31",
+      "valor": 3747.8574,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-04-30",
+      "valor": 2325.3307,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-05-31",
+      "valor": 1553.7289,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-06-30",
+      "valor": -8002.2814,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-07-31",
+      "valor": -1739.4699,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-08-31",
+      "valor": -7690.3326,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-09-30",
+      "valor": -6452.0384,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-10-31",
+      "valor": -440.6771,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-11-30",
+      "valor": 4258.0006,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2013-12-31",
+      "valor": -11412.2565,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-01-31",
+      "valor": 5705.3946,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-02-28",
+      "valor": -10117.1547,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-03-31",
+      "valor": 177.4701,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-04-30",
+      "valor": 3552.7708,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-05-31",
+      "valor": -1155.7218,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-06-30",
+      "valor": -12727.1471,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-07-31",
+      "valor": -216.7008,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-08-31",
+      "valor": -6304.2883,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-09-30",
+      "valor": -1913.825,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-10-31",
+      "valor": -3690.1833,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-11-30",
+      "valor": 553.6585,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2014-12-31",
+      "valor": -11600.1854,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-01-31",
+      "valor": 9130.4279,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-02-28",
+      "valor": -1760.98,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-03-31",
+      "valor": -13206.6411,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-04-30",
+      "valor": 4144.4564,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-05-31",
+      "valor": 3694.0908,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-06-30",
+      "valor": -15326.8209,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-07-31",
+      "valor": -356.9119,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-08-31",
+      "valor": -3973.5938,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-09-30",
+      "valor": 310.1049,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-10-31",
+      "valor": -7099.2753,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-11-30",
+      "valor": 5743.2772,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2015-12-31",
+      "valor": -10791.1383,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-01-31",
+      "valor": 6344.2059,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-02-29",
+      "valor": -3827.6952,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-03-31",
+      "valor": -322.4309,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-04-30",
+      "valor": -2477.5079,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-05-31",
+      "valor": -170.6624,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-06-30",
+      "valor": -9164.2094,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-07-31",
+      "valor": -3488.0384,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-08-31",
+      "valor": -7092.2399,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-09-30",
+      "valor": -2661.4385,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-10-31",
+      "valor": -5775.0836,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-11-30",
+      "valor": -4529.2512,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2016-12-31",
+      "valor": -13324.9539,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-01-31",
+      "valor": 10280.2359,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-02-28",
+      "valor": -4603.0807,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-03-31",
+      "valor": -5812.082,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-04-30",
+      "valor": 3330.7967,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-05-31",
+      "valor": 2543.8096,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-06-30",
+      "valor": -14000.6847,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-07-31",
+      "valor": -4416.7604,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-08-31",
+      "valor": -3349.2902,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-09-30",
+      "valor": -8084.8489,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-10-31",
+      "valor": -2930.2177,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-11-30",
+      "valor": -367.4799,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2017-12-31",
+      "valor": -19385.8794,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-01-31",
+      "valor": 9628.4868,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-02-28",
+      "valor": 103.4661,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-03-31",
+      "valor": -3772.1639,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-04-30",
+      "valor": -3436.7061,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-05-31",
+      "valor": -4273.529,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-06-30",
+      "valor": -14899.5379,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-07-31",
+      "valor": -1798.7722,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-08-31",
+      "valor": -524.1092,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-09-30",
+      "valor": -6693.2353,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-10-31",
+      "valor": 8403.2149,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-11-30",
+      "valor": -2116.0214,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2018-12-31",
+      "valor": -18518.0734,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-01-31",
+      "valor": 7521.0391,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-02-28",
+      "valor": -3972.73,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-03-31",
+      "valor": -773.5255,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-04-30",
+      "valor": -4971.6327,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-05-31",
+      "valor": -738.5643,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-06-30",
+      "valor": -19794.9769,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-07-31",
+      "valor": -1683.9957,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-08-31",
+      "valor": -314.5183,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-09-30",
+      "valor": -5088.2268,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-10-31",
+      "valor": -1843.5436,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-11-30",
+      "valor": -8596.5604,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2019-12-31",
+      "valor": -19276.6766,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-01-31",
+      "valor": 9717.4849,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-02-29",
+      "valor": -32042.7586,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-03-31",
+      "valor": 16673.2173,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-04-30",
+      "valor": -3347.3787,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-05-31",
+      "valor": -13534.714,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-06-30",
+      "valor": -23677.6832,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-07-31",
+      "valor": -6627.1655,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-08-31",
+      "valor": -7031.2498,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-09-30",
+      "valor": -2066.3435,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-10-31",
+      "valor": -5504.1826,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-11-30",
+      "valor": -8596.584,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2020-12-31",
+      "valor": -28280.2466,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-01-31",
+      "valor": 12726.6893,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-02-28",
+      "valor": -10463.5897,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-03-31",
+      "valor": -29626.8227,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-04-30",
+      "valor": 28696.8675,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-05-31",
+      "valor": -5521.6221,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-06-30",
+      "valor": -23582.9486,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-07-31",
+      "valor": -9023.553,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-08-31",
+      "valor": -5753.202,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-09-30",
+      "valor": -3680.2442,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-10-31",
+      "valor": 2809.8093,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-11-30",
+      "valor": 1737.5299,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2021-12-31",
+      "valor": -27476.2575,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-01-31",
+      "valor": 11569.2474,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-02-28",
+      "valor": -8247.7847,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-03-31",
+      "valor": 5572.62,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-04-30",
+      "valor": -3126.1732,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-05-31",
+      "valor": 2634.0423,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-06-30",
+      "valor": -19317.4532,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-07-31",
+      "valor": -6648.3563,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-08-31",
+      "valor": -4006.5833,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-09-30",
+      "valor": -1242.084,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-10-31",
+      "valor": -6600.8949,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-11-30",
+      "valor": -7083.1657,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2022-12-31",
+      "valor": -36777.3856,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-01-31",
+      "valor": 9893.748,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-02-28",
+      "valor": -9832.8186,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-03-31",
+      "valor": -39841.7935,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-04-30",
+      "valor": 29074.3497,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-05-31",
+      "valor": 511.5398,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-06-30",
+      "valor": -26668.3939,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-07-31",
+      "valor": -9831.0647,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-08-31",
+      "valor": -5887.4395,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-09-30",
+      "valor": -9920.7756,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-10-31",
+      "valor": -8309.5992,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-11-30",
+      "valor": -2815.819,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2023-12-31",
+      "valor": -21283.3136,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-01-31",
+      "valor": 12251.0666,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-02-29",
+      "valor": -11378.8935,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-03-31",
+      "valor": -10773.4059,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-04-30",
+      "valor": -14903.3212,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-05-31",
+      "valor": -5232.1111,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-06-30",
+      "valor": -15611.8237,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-07-31",
+      "valor": -8228.2629,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-08-31",
+      "valor": -14372.0347,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-09-30",
+      "valor": -747.9587,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-10-31",
+      "valor": -3161.4802,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-11-30",
+      "valor": -14033.9372,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2024-12-31",
+      "valor": -18548.4353,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-01-31",
+      "valor": 14596.1592,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-02-28",
+      "valor": -57371.6529,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-03-31",
+      "valor": 29433.315,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-04-30",
+      "valor": -4064.5379,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-05-31",
+      "valor": -13969.1562,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-06-30",
+      "valor": -32186.0237,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-07-31",
+      "valor": -3333.3245,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-08-31",
+      "valor": 1683.7542,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-09-30",
+      "valor": -9461.4699,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-10-31",
+      "valor": -15325.1627,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-11-30",
+      "valor": 5780.1587,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2025-12-31",
+      "valor": -35780.6771,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-01-31",
+      "valor": 20506.8878,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-02-28",
+      "valor": -17502.8866,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-03-31",
+      "valor": -56298.9709,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-04-30",
+      "valor": -1253.4726,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-05-31",
+      "valor": 35508.4603,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-06-30",
+      "valor": -35406.5928,
+      "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    }
+  ]
+}
