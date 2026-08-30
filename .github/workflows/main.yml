@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v5
@@ -37,8 +39,17 @@ jobs:
           git config user.email "actions@github.com"
           git add data/
           if git diff --cached --quiet; then
-            echo "No hay datos nuevos hoy."
-          else
-            git commit -m "Actualizacion automatica de datos"
-            git push
+            echo "No hay datos nuevos para guardar."
+            exit 0
           fi
+          git commit -m "Actualizacion automatica de datos"
+          for intento in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Datos guardados correctamente."
+              exit 0
+            fi
+            echo "El repositorio cambio mientras trabajabamos. Reintento $intento de 3..."
+            git pull --rebase origin main || git rebase --abort || true
+          done
+          echo "No se pudieron guardar los datos despues de 3 intentos."
+          exit 1
