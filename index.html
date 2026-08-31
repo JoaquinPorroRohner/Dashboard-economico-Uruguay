@@ -307,11 +307,17 @@ function tarjetaIndicador(def, datos) {
   }
 
   const badgeMercado = datos.fuente_tipo === "mercado" ? '<span class="badge-mercado">Fuente de mercado</span>' : "";
+  // Si el sitio oficial tiene su certificado mal publicado, el dato se baja
+  // igual (de la fuente correcta) pero sin poder verificar la identidad del
+  // sitio. Se avisa acá para no esconderlo.
+  const avisoCertificado = datos.certificado_verificado === false
+    ? '<span class="badge-mercado" title="El sitio oficial tiene su certificado mal publicado. El dato viene de la fuente correcta, pero no se pudo verificar la identidad del sitio.">Sin verificar</span>'
+    : "";
 
   return `<div class="tarjeta">
     <div class="fila-top">
       <div>
-        <div class="nombre">${datos.nombre}${badgeMercado}</div>
+        <div class="nombre">${datos.nombre}${badgeMercado}${avisoCertificado}</div>
         <div class="unidad">${datos.unidad}</div>
       </div>
       ${iconoBadge(estado.estado)}

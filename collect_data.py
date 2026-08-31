@@ -18,6 +18,7 @@ Este script está pensado para correr automáticamente todos los días desde
 GitHub Actions (ver .github/workflows/actualizar-datos.yml), pero también
 se puede correr a mano con: python collect_data.py
 """
+import contextlib
 import json
 import os
 import ssl
@@ -207,7 +208,7 @@ def cargar_historial(indicador_id: str) -> list:
 
 
 def guardar_historial(indicador_id: str, spec: dict, historial: list, estado: dict,
-                       fuente_url: str):
+                       fuente_url: str, verificacion_relajada: bool = False):
     archivo = DATA_DIR / f"{indicador_id}.json"
     salida = {
         "id": indicador_id,
@@ -219,6 +220,7 @@ def guardar_historial(indicador_id: str, spec: dict, historial: list, estado: di
         "fuente_url": fuente_url,
         "nota": spec.get("nota", ""),
         "ultima_actualizacion": HOY,
+        "certificado_verificado": not verificacion_relajada,
         "estado_actual": estado,
         "historial": historial,
     }
@@ -226,49 +228,107 @@ def guardar_historial(indicador_id: str, spec: dict, historial: list, estado: di
         json.dump(salida, f, ensure_ascii=False, indent=2)
 
 
-def procesar_indicador(indicador_id: str, spec: dict) -> dict:
-    from econuy import load_dataset  # import acá para que un fallo de red
-                                      # no impida ver el resumen de errores
+@contextlib.contextmanager
+def verificacion_relajada():
+    """Baja temporalmente la verificación del certificado, y la restaura.
 
-    resultado = {"id": indicador_id, "ok": False, "mensaje": ""}
+    Se usa SOLO como reintento, y SOLO cuando el intento normal falló
+    justamente por un certificado mal publicado (hoy: www5.ine.gub.uy).
+    Cada indicador que pasa por acá queda marcado en el archivo de datos y
+    en el resumen de la corrida, para que siempre se sepa cuál se bajó así.
+
+    Por qué es aceptable en este caso puntual: son datos públicos, la
+    conexión es de solo lectura y no se envía ninguna contraseña ni dato
+    privado. Lo peor que podría pasar es recibir un dato adulterado, y eso
+    se detectaría porque el dashboard muestra siempre la fuente oficial al
+    lado de cada número.
+    """
+    contexto_previo = ssl._create_default_https_context
+    cert_previo = os.environ.get("SSL_CERT_FILE")
+    sin_verificar = ssl._create_unverified_context()
+    ssl._create_default_https_context = lambda *a, **kw: sin_verificar
+    os.environ.pop("SSL_CERT_FILE", None)
     try:
-        dataset = load_dataset(spec["dataset"])
-        serie, nombre_columna = elegir_columna(dataset, spec)
-        serie = serie.dropna().sort_index()
+        yield
+    finally:
+        ssl._create_default_https_context = contexto_previo
+        if cert_previo is not None:
+            os.environ["SSL_CERT_FILE"] = cert_previo
 
-        historial_existente = cargar_historial(indicador_id)
-        fechas_existentes = {r["fecha"] for r in historial_existente}
 
-        nuevos = 0
-        for fecha, valor in serie.items():
-            fecha_str = fecha.strftime("%Y-%m-%d")
-            if fecha_str in fechas_existentes:
-                continue  # nunca pisamos un dato histórico ya guardado
-            historial_existente.append({
-                "fecha": fecha_str,
-                "valor": round(float(valor), 4),
-                "fecha_incorporado": HOY,
-            })
-            nuevos += 1
+def _bajar_indicador(indicador_id: str, spec: dict) -> tuple:
+    """Baja un indicador y devuelve (historial actualizado, estado, url, columna)."""
+    from econuy import load_dataset
 
-        historial_existente.sort(key=lambda r: r["fecha"])
-        estado = calcular_estado_alerta(serie)
+    dataset = load_dataset(spec["dataset"])
+    serie, nombre_columna = elegir_columna(dataset, spec)
 
-        sources = dataset.metadata.config.__dict__ if hasattr(dataset, "metadata") else {}
-        fuente_url = ""
-        try:
-            from econuy.utils.operations import get_download_sources
-            urls = get_download_sources(spec["dataset"])
-            fuente_url = urls.get("main") or urls.get("historical") or urls.get("current") or ""
-        except Exception:
-            pass
+    # Algunas planillas oficiales traen filas sueltas con la fecha vacía o
+    # rota (encabezados, notas al pie, filas de relleno). Si no las sacamos
+    # acá, rompen todo el indicador al momento de convertir la fecha.
+    serie = serie[~pd.isna(serie.index)]
+    serie = serie.dropna().sort_index()
 
-        guardar_historial(indicador_id, spec, historial_existente, estado, fuente_url)
-        resultado["ok"] = True
-        resultado["mensaje"] = f"{nuevos} dato(s) nuevo(s) (columna: {nombre_columna})"
+    historial_existente = cargar_historial(indicador_id)
+    fechas_existentes = {r["fecha"] for r in historial_existente}
+
+    nuevos = 0
+    for fecha, valor in serie.items():
+        if pd.isna(fecha) or pd.isna(valor):
+            continue  # dato incompleto en la fuente: lo salteamos
+        fecha_str = fecha.strftime("%Y-%m-%d")
+        if fecha_str in fechas_existentes:
+            continue  # nunca pisamos un dato histórico ya guardado
+        historial_existente.append({
+            "fecha": fecha_str,
+            "valor": round(float(valor), 4),
+            "fecha_incorporado": HOY,
+        })
+        nuevos += 1
+
+    historial_existente.sort(key=lambda r: r["fecha"])
+    estado = calcular_estado_alerta(serie)
+
+    fuente_url = ""
+    try:
+        from econuy.utils.operations import get_download_sources
+        urls = get_download_sources(spec["dataset"])
+        fuente_url = urls.get("main") or urls.get("historical") or urls.get("current") or ""
+    except Exception:
+        pass
+
+    return historial_existente, estado, fuente_url, nombre_columna, nuevos
+
+
+def procesar_indicador(indicador_id: str, spec: dict) -> dict:
+    resultado = {"id": indicador_id, "ok": False, "mensaje": "",
+                 "verificacion_relajada": False}
+    try:
+        datos = _bajar_indicador(indicador_id, spec)
     except Exception as e:
-        resultado["mensaje"] = f"{type(e).__name__}: {e}"
-        resultado["traceback"] = traceback.format_exc()
+        # ¿Falló por el certificado? Si no, no insistimos: es otro problema.
+        if "CERTIFICATE_VERIFY_FAILED" not in str(e):
+            resultado["mensaje"] = f"{type(e).__name__}: {e}"
+            resultado["traceback"] = traceback.format_exc()
+            return resultado
+        # Sí fue el certificado: reintentamos una sola vez, sin verificar,
+        # y lo dejamos anotado.
+        try:
+            with verificacion_relajada():
+                datos = _bajar_indicador(indicador_id, spec)
+            resultado["verificacion_relajada"] = True
+        except Exception as e2:
+            resultado["mensaje"] = (f"Fallo tambien sin verificar -> "
+                                    f"{type(e2).__name__}: {e2}")
+            resultado["traceback"] = traceback.format_exc()
+            return resultado
+
+    historial, estado, fuente_url, nombre_columna, nuevos = datos
+    guardar_historial(indicador_id, spec, historial, estado, fuente_url,
+                      resultado["verificacion_relajada"])
+    resultado["ok"] = True
+    aviso = " [certificado no verificado]" if resultado["verificacion_relajada"] else ""
+    resultado["mensaje"] = f"{nuevos} dato(s) nuevo(s) (columna: {nombre_columna}){aviso}"
     return resultado
 
 
@@ -287,8 +347,14 @@ def main():
         json.dump({"fecha": HOY, "resultados": resumen}, f, ensure_ascii=False, indent=2)
 
     fallidos = [r for r in resumen if not r["ok"]]
+    relajados = [r for r in resumen if r.get("verificacion_relajada")]
     print(f"\nTotal: {len(resumen)} indicadores | OK: {len(resumen) - len(fallidos)} | "
           f"Con error: {len(fallidos)}")
+    if relajados:
+        print(f"\nBajados sin verificar el certificado ({len(relajados)}) — "
+              f"el sitio oficial lo tiene mal publicado:")
+        for r in relajados:
+            print(f"  - {r['id']}")
     if fallidos:
         print("\nIndicadores con error (revisar, pero no se detiene el resto):")
         for r in fallidos:
