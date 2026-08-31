@@ -7,7 +7,8 @@
   "fuente_organismo": "BCU",
   "fuente_url": "https://www.bcu.gub.uy/Estadisticas-e-Indicadores/Indice_Cambio_Real/TCRE.xls",
   "nota": "",
-  "ultima_actualizacion": "2026-08-30 17:25:59 UTC",
+  "ultima_actualizacion": "2026-08-31 12:51:38 UTC",
+  "certificado_verificado": true,
   "estado_actual": {
     "estado": "Normal",
     "z_score": -0.08,

@@ -1,0 +1,960 @@
+{
+  "id": "inflacion_ipc",
+  "nombre": "Inflación (IPC)",
+  "categoria": "Precios",
+  "unidad": "Índice (base oct-2022=100)",
+  "fuente_tipo": "oficial",
+  "fuente_organismo": "INE",
+  "fuente_url": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/SERIES%20Y%20OTROS/IPC/Base%20Octubre%202022=100/IPC%20general_Total%20Pais_Montevideo_Interior_base%202022.xlsx",
+  "nota": "",
+  "ultima_actualizacion": "2026-08-31 12:51:38 UTC",
+  "certificado_verificado": false,
+  "estado_actual": {
+    "estado": "Normal",
+    "z_score": -0.92,
+    "variacion_periodo_pct": 0.07,
+    "variacion_interanual_pct": 4.27
+  },
+  "historial": [
+    {
+      "fecha": "1937-07-31",
+      "valor": 38.2995,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1937-08-31",
+      "valor": 38.7782,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1937-09-30",
+      "valor": 39.1421,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1937-10-31",
+      "valor": 39.6974,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1937-11-30",
+      "valor": 39.8315,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1937-12-31",
+      "valor": 39.9617,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-01-31",
+      "valor": 40.1034,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-02-28",
+      "valor": 40.406,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-03-31",
+      "valor": 40.6319,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-04-30",
+      "valor": 40.8388,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-05-31",
+      "valor": 41.1298,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-06-30",
+      "valor": 41.3022,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-07-31",
+      "valor": 41.5933,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-08-31",
+      "valor": 41.8997,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-09-30",
+      "valor": 42.2482,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-10-31",
+      "valor": 42.6656,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-11-30",
+      "valor": 43.0142,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1938-12-31",
+      "valor": 43.1827,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-01-31",
+      "valor": 43.3129,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-02-28",
+      "valor": 43.4278,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-03-31",
+      "valor": 43.8338,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-04-30",
+      "valor": 44.3661,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-05-31",
+      "valor": 44.8755,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-06-30",
+      "valor": 45.0326,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-07-31",
+      "valor": 44.7032,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-08-31",
+      "valor": 45.5534,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-09-30",
+      "valor": 46.0054,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-10-31",
+      "valor": 46.3079,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-11-30",
+      "valor": 46.5147,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1939-12-31",
+      "valor": 46.6641,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-01-31",
+      "valor": 46.8671,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-02-29",
+      "valor": 47.2271,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-03-31",
+      "valor": 47.7173,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-04-30",
+      "valor": 48.3684,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-05-31",
+      "valor": 48.7668,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-06-30",
+      "valor": 48.8663,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-07-31",
+      "valor": 48.514,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-08-31",
+      "valor": 49.6974,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-09-30",
+      "valor": 50.5209,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-10-31",
+      "valor": 50.8158,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-11-30",
+      "valor": 50.7851,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1940-12-31",
+      "valor": 50.946,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-01-31",
+      "valor": 51.1222,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-02-28",
+      "valor": 51.5052,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-03-31",
+      "valor": 51.892,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-04-30",
+      "valor": 52.4129,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-05-31",
+      "valor": 52.7231,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-06-30",
+      "valor": 52.7997,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-07-31",
+      "valor": 52.5201,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-08-31",
+      "valor": 53.6844,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-09-30",
+      "valor": 54.2742,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-10-31",
+      "valor": 54.6534,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-11-30",
+      "valor": 54.9636,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1941-12-31",
+      "valor": 55.2317,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-01-31",
+      "valor": 55.4807,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-02-28",
+      "valor": 56.1509,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-03-31",
+      "valor": 56.8135,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-04-30",
+      "valor": 57.2041,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-05-31",
+      "valor": 57.5488,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-06-30",
+      "valor": 57.7939,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-07-31",
+      "valor": 57.4761,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-08-31",
+      "valor": 58.8817,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-09-30",
+      "valor": 59.8238,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-10-31",
+      "valor": 60.4443,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-11-30",
+      "valor": 60.72,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1942-12-31",
+      "valor": 61.306,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-01-31",
+      "valor": 61.5511,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-02-28",
+      "valor": 61.7924,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-03-31",
+      "valor": 62.1448,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-04-30",
+      "valor": 62.298,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-05-31",
+      "valor": 62.4129,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-06-30",
+      "valor": 62.4741,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-07-31",
+      "valor": 62.1333,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-08-31",
+      "valor": 63.7495,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-09-30",
+      "valor": 64.0674,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-10-31",
+      "valor": 64.5002,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-11-30",
+      "valor": 64.6419,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1943-12-31",
+      "valor": 64.7262,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-01-31",
+      "valor": 64.8219,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-02-29",
+      "valor": 65.0287,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-03-31",
+      "valor": 65.5304,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-04-30",
+      "valor": 65.8828,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-05-31",
+      "valor": 66.1854,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-06-30",
+      "valor": 66.4075,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-07-31",
+      "valor": 66.2045,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-08-31",
+      "valor": 68.0008,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-09-30",
+      "valor": 68.5982,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-10-31",
+      "valor": 68.7897,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-11-30",
+      "valor": 68.8357,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1944-12-31",
+      "valor": 69.3949,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-01-31",
+      "valor": 70.0804,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-02-28",
+      "valor": 70.4979,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-03-31",
+      "valor": 70.9728,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-04-30",
+      "valor": 71.3252,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-05-31",
+      "valor": 71.4899,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-06-30",
+      "valor": 71.7503,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-07-31",
+      "valor": 71.4745,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-08-31",
+      "valor": 73.0257,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-09-30",
+      "valor": 73.738,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-10-31",
+      "valor": 74.144,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-11-30",
+      "valor": 74.4619,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1945-12-31",
+      "valor": 74.7568,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-01-31",
+      "valor": 75.2355,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-02-28",
+      "valor": 75.81,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-03-31",
+      "valor": 76.4803,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-04-30",
+      "valor": 76.8748,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-05-31",
+      "valor": 77.4531,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-06-30",
+      "valor": 77.7786,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-07-31",
+      "valor": 77.7556,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-08-31",
+      "valor": 79.3834,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-09-30",
+      "valor": 79.8698,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-10-31",
+      "valor": 80.9345,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-11-30",
+      "valor": 82.5507,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1946-12-31",
+      "valor": 83.018,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-01-31",
+      "valor": 83.0333,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-02-28",
+      "valor": 83.4891,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-03-31",
+      "valor": 83.9678,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-04-30",
+      "valor": 84.504,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-05-31",
+      "valor": 84.9943,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-06-30",
+      "valor": 85.2355,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-07-31",
+      "valor": 85.0747,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-08-31",
+      "valor": 86.4381,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-09-30",
+      "valor": 87.1505,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-10-31",
+      "valor": 87.6867,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-11-30",
+      "valor": 88.1272,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1947-12-31",
+      "valor": 88.5293,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-01-31",
+      "valor": 89.1191,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-02-29",
+      "valor": 89.5825,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-03-31",
+      "valor": 90.3447,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-04-30",
+      "valor": 90.7622,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-05-31",
+      "valor": 91.7043,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-06-30",
+      "valor": 91.938,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-07-31",
+      "valor": 91.846,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-08-31",
+      "valor": 93.4853,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-09-30",
+      "valor": 94.8602,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-10-31",
+      "valor": 95.9096,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-11-30",
+      "valor": 96.3807,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1948-12-31",
+      "valor": 96.8288,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-01-31",
+      "valor": 97.3956,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-02-28",
+      "valor": 98.1463,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-03-31",
+      "valor": 98.9583,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-04-30",
+      "valor": 99.7894,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-05-31",
+      "valor": 100.0,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-06-30",
+      "valor": 99.72,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-07-31",
+      "valor": 99.4654,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-08-31",
+      "valor": 101.0106,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-09-30",
+      "valor": 102.0241,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-10-31",
+      "valor": 102.9435,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-11-30",
+      "valor": 103.7136,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1949-12-31",
+      "valor": 103.7032,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-01-31",
+      "valor": 103.2226,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-02-28",
+      "valor": 102.8492,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-03-31",
+      "valor": 103.0261,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-04-30",
+      "valor": 103.655,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-05-31",
+      "valor": 104.3037,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-06-30",
+      "valor": 104.6616,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-07-31",
+      "valor": 104.5514,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-08-31",
+      "valor": 106.1498,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-09-30",
+      "valor": 106.8319,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-10-31",
+      "valor": 106.8536,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-11-30",
+      "valor": 107.5252,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1950-12-31",
+      "valor": 107.9532,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-01-31",
+      "valor": 108.3377,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-02-28",
+      "valor": 108.4531,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-03-31",
+      "valor": 108.7631,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-04-30",
+      "valor": 109.1706,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-05-31",
+      "valor": 109.5264,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-06-30",
+      "valor": 109.9213,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-07-31",
+      "valor": 110.2922,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-08-31",
+      "valor": 111.509,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-09-30",
+      "valor": 112.2799,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-10-31",
+      "valor": 112.9175,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-11-30",
+      "valor": 113.2837,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1951-12-31",
+      "valor": 113.4059,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-01-31",
+      "valor": 113.3059,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-02-29",
+      "valor": 113.3672,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-03-31",
+      "valor": 113.3291,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-04-30",
+      "valor": 113.8096,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-05-31",
+      "valor": 114.2616,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-06-30",
+      "valor": 114.4225,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-07-31",
+      "valor": 114.3156,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-08-31",
+      "valor": 115.3646,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-09-30",
+      "valor": 115.768,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-10-31",
+      "valor": 116.2393,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-11-30",
+      "valor": 116.8636,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1952-12-31",
+      "valor": 117.6866,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1953-01-31",
+      "valor": 118.1259,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1953-02-28",
+      "valor": 118.2034,
+      "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    }
+  ]
+}
