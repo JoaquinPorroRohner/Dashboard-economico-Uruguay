@@ -7,13 +7,14 @@
   "fuente_organismo": "BCU",
   "fuente_url": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/SERIES%20Y%20OTROS/Cotizaci%C3%B3n%20monedas/Cotizaci%C3%B3n%20monedas.xlsx",
   "nota": "",
-  "ultima_actualizacion": "2026-08-31 12:51:38 UTC",
+  "ultima_actualizacion": "2026-08-31 15:36:42 UTC",
   "certificado_verificado": false,
   "estado_actual": {
     "estado": "Normal",
     "z_score": 0.28,
     "variacion_periodo_pct": 0.24,
-    "variacion_interanual_pct": 0.0
+    "variacion_interanual_pct": 0.0,
+    "variacion_interanual_abs": 0.0
   },
   "historial": [
     {

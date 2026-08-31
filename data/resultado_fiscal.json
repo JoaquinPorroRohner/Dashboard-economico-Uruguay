@@ -7,13 +7,14 @@
   "fuente_organismo": "MEF / BCU",
   "fuente_url": "https://www.gub.uy/ministerio-economia-finanzas/datos-y-estadisticas/datos/informacion-resultados-del-sector-publico",
   "nota": "",
-  "ultima_actualizacion": "2026-08-31 12:51:38 UTC",
+  "ultima_actualizacion": "2026-08-31 15:36:42 UTC",
   "certificado_verificado": true,
   "estado_actual": {
     "estado": "Normal",
     "z_score": -0.13,
     "variacion_periodo_pct": -199.71,
-    "variacion_interanual_pct": 10.01
+    "variacion_interanual_pct": null,
+    "variacion_interanual_abs": -3220.5691
   },
   "historial": [
     {

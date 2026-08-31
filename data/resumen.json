@@ -1,0 +1,29 @@
+{
+  "fecha": "2026-08-31 15:36:42 UTC",
+  "andan": [
+    "inflacion_ipc",
+    "ui",
+    "tipo_cambio",
+    "tipo_cambio_real",
+    "actividad",
+    "empleo",
+    "desempleo",
+    "pib",
+    "consumo_privado",
+    "resultado_fiscal"
+  ],
+  "fallan": {
+    "salario_real": "Fallo tambien sin verificar -> TypeError: '<' not supported between instances of 'str' and 'Timestamp'",
+    "imae": "ValueError: could not convert string to float: '96,519'",
+    "tasa_politica_monetaria": "NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name=\"ctl00$ContentPlaceHolder1$dateDesde$dateInput\"]\"}\n  (Session info: chrome=151.0.7922.173); For docum",
+    "expectativas_inflacion": "UnboundLocalError: cannot access local variable 'raw' where it is not associated with a value",
+    "deuda_publica": "KeyError: '9. Deuda Bruta del Sector Público no monetario por plazo y  moneda.'",
+    "riesgo_pais": "ReadTimeoutError: HTTPConnectionPool(host='localhost', port=44795): Read timed out. (read timeout=120)"
+  },
+  "sin_verificar": [
+    "inflacion_ipc",
+    "ui",
+    "tipo_cambio",
+    "actividad"
+  ]
+}
