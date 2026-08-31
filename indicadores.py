@@ -99,14 +99,21 @@ INDICADORES = {
     "salario_real": {
         "nombre": "Salario real",
         "categoria": "Mercado laboral",
-        "dataset": "real_wages",
-        "columna_contiene": ["índice medio de salarios reales"],
+        # Tomamos el salario NOMINAL del INE y lo dividimos nosotros por el
+        # IPC para obtener el real. El cálculo propio de la librería (dataset
+        # "real_wages") viene fallando, y esta es la cuenta estándar de todos
+        # modos: salario nominal descontada la inflación.
+        "dataset": "nominal_wages",
+        "columna_contiene": ["índice medio de salarios"],
         "columna_excluye": ["privados", "públicos"],
-        "unidad": "Índice (2008-07=100)",
+        "deflactar_con": "cpi",
+        "unidad": "Poder de compra (base 100 = primer dato)",
         "fuente_tipo": "oficial",
         "fuente_organismo": "INE",
         "requiere_navegador": False,
         "frecuencia": "mensual",
+        "nota": ("Calculado como el salario nominal del INE dividido por el "
+                 "IPC del INE: mide cuánto puede comprar realmente el salario."),
     },
     "pib": {
         "nombre": "PIB (precios constantes)",

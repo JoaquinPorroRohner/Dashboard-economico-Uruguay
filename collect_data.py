@@ -268,12 +268,64 @@ def verificacion_relajada():
             os.environ["SSL_CERT_FILE"] = cert_previo
 
 
+def a_numero(serie: pd.Series) -> pd.Series:
+    """Convierte a número los valores que vinieron como texto.
+
+    Algunas planillas oficiales bajan los números con formato uruguayo:
+    '96,519' (coma decimal) o '1.234,5' (punto de miles). Si no los
+    convertimos, el indicador entero se cae. Solo se tocan los valores que
+    realmente son texto: los que ya son número quedan intactos.
+    """
+    if serie.dtype != object:
+        return serie
+
+    def convertir(valor):
+        if isinstance(valor, str):
+            limpio = valor.strip().replace(".", "").replace(",", ".")
+            try:
+                return float(limpio)
+            except ValueError:
+                return None
+        return valor
+
+    return pd.to_numeric(serie.map(convertir), errors="coerce")
+
+
+def deflactar(serie: pd.Series, dataset_precios: str) -> pd.Series:
+    """Convierte una serie nominal en real: la divide por el índice de
+    precios y le pone base 100 en el primer dato disponible.
+
+    Se usa para el salario real. La librería trae su propio cálculo pero
+    viene fallando, así que hacemos la cuenta nosotros — que además es la
+    estándar: salario nominal dividido por la inflación.
+    """
+    from econuy import load_dataset
+
+    precios = load_dataset(dataset_precios).to_named().iloc[:, 0]
+    precios = a_numero(precios)
+    precios = precios[~pd.isna(precios.index)].dropna()
+
+    juntos = pd.concat(
+        [serie.rename("nominal"), precios.rename("precios")], axis=1, join="inner"
+    ).dropna()
+    if juntos.empty:
+        raise ValueError("No hay fechas en común entre la serie y el índice de precios")
+
+    real = juntos["nominal"] / juntos["precios"]
+    return real / real.iloc[0] * 100
+
+
 def _bajar_indicador(indicador_id: str, spec: dict) -> tuple:
     """Baja un indicador y devuelve (historial actualizado, estado, url, columna)."""
     from econuy import load_dataset
 
     dataset = load_dataset(spec["dataset"])
     serie, nombre_columna = elegir_columna(dataset, spec)
+    serie = a_numero(serie)
+
+    if spec.get("deflactar_con"):
+        serie = serie[~pd.isna(serie.index)].dropna().sort_index()
+        serie = deflactar(serie, spec["deflactar_con"])
 
     # Algunas planillas oficiales traen filas sueltas con la fecha vacía o
     # rota (encabezados, notas al pie, filas de relleno). Si no las sacamos
@@ -319,7 +371,15 @@ def procesar_indicador(indicador_id: str, spec: dict) -> dict:
         datos = _bajar_indicador(indicador_id, spec)
     except Exception as e:
         # ¿Falló por el certificado? Si no, no insistimos: es otro problema.
-        if "CERTIFICATE_VERIFY_FAILED" not in str(e):
+        #
+        # El UnboundLocalError entra acá a propósito: la librería econuy tiene
+        # un bug por el que, cuando la descarga falla, se traga el error y
+        # deja una variable sin asignar. O sea que ese error casi siempre
+        # significa "no se pudo bajar el archivo", y vale la pena reintentar.
+        es_problema_de_descarga = (
+            "CERTIFICATE_VERIFY_FAILED" in str(e) or isinstance(e, UnboundLocalError)
+        )
+        if not es_problema_de_descarga:
             resultado["mensaje"] = f"{type(e).__name__}: {e}"
             resultado["traceback"] = traceback.format_exc()
             return resultado
