@@ -199,22 +199,22 @@
 // color correcto — el estado Normal/Atención/Alerta es aparte y siempre
 // estadístico/objetivo, no depende de esta interpretación.
 const INDICADORES = [
-  { id: "inflacion_ipc",            categoria: "Precios",             subir: "malo" },
-  { id: "ui",                       categoria: "Precios",             subir: "neutro" },
-  { id: "expectativas_inflacion",   categoria: "Precios",             subir: "malo" },
-  { id: "tipo_cambio",              categoria: "Cambiario",           subir: "neutro" },
-  { id: "tipo_cambio_real",         categoria: "Cambiario",           subir: "neutro" },
-  { id: "actividad",                categoria: "Mercado laboral",     subir: "bueno" },
-  { id: "empleo",                   categoria: "Mercado laboral",     subir: "bueno" },
-  { id: "desempleo",                categoria: "Mercado laboral",     subir: "malo" },
-  { id: "salario_real",             categoria: "Mercado laboral",     subir: "bueno" },
-  { id: "pib",                      categoria: "Actividad económica", subir: "bueno" },
-  { id: "imae",                     categoria: "Actividad económica", subir: "bueno" },
-  { id: "consumo_privado",          categoria: "Actividad económica", subir: "bueno" },
-  { id: "resultado_fiscal",         categoria: "Fiscal",              subir: "bueno" },
-  { id: "deuda_publica",            categoria: "Fiscal",              subir: "malo" },
-  { id: "tasa_politica_monetaria",  categoria: "Financiero",          subir: "neutro" },
-  { id: "riesgo_pais",              categoria: "Financiero",          subir: "malo" },
+  { id: "inflacion_ipc",            nombre: "Inflación (IPC)",                        categoria: "Precios",             subir: "malo" },
+  { id: "ui",                       nombre: "Unidad Indexada (UI)",                   categoria: "Precios",             subir: "neutro" },
+  { id: "expectativas_inflacion",   nombre: "Expectativas de inflación (12 meses)",   categoria: "Precios",             subir: "malo" },
+  { id: "tipo_cambio",              nombre: "Tipo de cambio USD/UYU",                 categoria: "Cambiario",           subir: "neutro" },
+  { id: "tipo_cambio_real",         nombre: "Tipo de cambio real (multilateral)",     categoria: "Cambiario",           subir: "neutro" },
+  { id: "actividad",                nombre: "Tasa de actividad",                      categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "empleo",                   nombre: "Tasa de empleo",                         categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "desempleo",                nombre: "Tasa de desempleo",                      categoria: "Mercado laboral",     subir: "malo" },
+  { id: "salario_real",             nombre: "Salario real",                           categoria: "Mercado laboral",     subir: "bueno" },
+  { id: "pib",                      nombre: "PIB (precios constantes)",               categoria: "Actividad económica", subir: "bueno" },
+  { id: "imae",                     nombre: "IMAE (actividad económica mensual)",     categoria: "Actividad económica", subir: "bueno" },
+  { id: "consumo_privado",          nombre: "Consumo privado (hogares)",              categoria: "Actividad económica", subir: "bueno" },
+  { id: "resultado_fiscal",         nombre: "Resultado fiscal (SPNF)",                categoria: "Fiscal",              subir: "bueno" },
+  { id: "deuda_publica",            nombre: "Deuda pública (SPNF)",                   categoria: "Fiscal",              subir: "malo" },
+  { id: "tasa_politica_monetaria",  nombre: "Tasa call / política monetaria",         categoria: "Financiero",          subir: "neutro" },
+  { id: "riesgo_pais",              nombre: "Riesgo país (UBI)",                      categoria: "Financiero",          subir: "malo" },
 ];
 const SUBIR_POR_ID = Object.fromEntries(INDICADORES.map(d => [d.id, d.subir]));
 
@@ -284,8 +284,8 @@ function iconoBadge(estado) {
 function tarjetaIndicador(def, datos) {
   if (!datos) {
     return `<div class="tarjeta">
-      <div class="fila-top"><div class="nombre">${def.id}</div></div>
-      <div class="vacio">Todavía no se recolectó este indicador (esperando la primera corrida automática)</div>
+      <div class="fila-top"><div class="nombre">${def.nombre || def.id}</div></div>
+      <div class="vacio">Sin datos todavía — este indicador aún no se pudo recolectar</div>
     </div>`;
   }
 
@@ -294,16 +294,29 @@ function tarjetaIndicador(def, datos) {
   const estado = datos.estado_actual || {};
   const deltaInteranual = estado.variacion_interanual_pct;
 
+  // El COLOR se decide siempre con la resta real (valor de hoy menos el de
+  // hace 12 meses), nunca con el porcentaje: en indicadores que pueden ser
+  // negativos —como el resultado fiscal— el porcentaje se da vuelta y haría
+  // que un déficit peor se pintara de verde.
+  const deltaAbs = estado.variacion_interanual_abs;
   let deltaHtml = "";
-  if (deltaInteranual !== null && deltaInteranual !== undefined) {
+  if (deltaAbs !== null && deltaAbs !== undefined) {
     const subir = SUBIR_POR_ID[def.id] || "neutro";
     let clase = "neutro";
-    if (subir !== "neutro" && deltaInteranual !== 0) {
-      const esMovimientoBueno = (subir === "bueno") === (deltaInteranual > 0);
+    if (subir !== "neutro" && deltaAbs !== 0) {
+      const esMovimientoBueno = (subir === "bueno") === (deltaAbs > 0);
       clase = esMovimientoBueno ? "positivo" : "negativo";
     }
-    const signo = deltaInteranual > 0 ? "+" : "";
-    deltaHtml = `<span class="delta ${clase}">${signo}${deltaInteranual}% interanual</span>`;
+    // El porcentaje solo se muestra cuando es fiable (viene calculado desde
+    // el script únicamente si el punto de partida era positivo). Si no, se
+    // muestra la diferencia real en las unidades del indicador.
+    let texto;
+    if (deltaInteranual !== null && deltaInteranual !== undefined) {
+      texto = `${deltaInteranual > 0 ? "+" : ""}${deltaInteranual}% interanual`;
+    } else {
+      texto = `${deltaAbs > 0 ? "+" : ""}${formatearNumero(deltaAbs)} en 12 meses`;
+    }
+    deltaHtml = `<span class="delta ${clase}">${texto}</span>`;
   }
 
   const badgeMercado = datos.fuente_tipo === "mercado" ? '<span class="badge-mercado">Fuente de mercado</span>' : "";

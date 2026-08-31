@@ -180,14 +180,25 @@ def calcular_estado_alerta(serie: pd.Series) -> dict:
     else:
         estado = "Normal"
 
-    # Variación interanual, si hay al menos 13 datos (para series mensuales)
+    # Variación interanual, si hay al menos 13 datos (para series mensuales).
+    #
+    # OJO con los indicadores que pueden ser negativos (el resultado fiscal,
+    # por ejemplo): ahí el porcentaje MIENTE. Si un déficit pasa de -32.000 a
+    # -35.407, la cuenta del porcentaje da +10%, y leído sin cuidado parece
+    # una mejora cuando en realidad el déficit creció. Por eso:
+    #   - el porcentaje solo se calcula si el punto de partida es positivo,
+    #   - y siempre guardamos además la diferencia real (resta), que nunca
+    #     se da vuelta y es la que el dashboard usa para decidir el color.
     variacion_interanual = None
+    variacion_interanual_abs = None
     if len(serie) >= 13:
         try:
-            variacion_interanual = round(
-                (serie.iloc[-1] / serie.iloc[-13] - 1) * 100, 2
-            )
-        except (IndexError, ZeroDivisionError):
+            anterior = float(serie.iloc[-13])
+            actual = float(serie.iloc[-1])
+            variacion_interanual_abs = round(actual - anterior, 4)
+            if anterior > 0:
+                variacion_interanual = round((actual / anterior - 1) * 100, 2)
+        except (IndexError, ZeroDivisionError, ValueError):
             pass
 
     return {
@@ -195,6 +206,7 @@ def calcular_estado_alerta(serie: pd.Series) -> dict:
         "z_score": round(float(z), 2),
         "variacion_periodo_pct": round(float(ultima_variacion) * 100, 2),
         "variacion_interanual_pct": variacion_interanual,
+        "variacion_interanual_abs": variacion_interanual_abs,
     }
 
 
@@ -345,6 +357,17 @@ def main():
     # sin tener que leer los logs de GitHub Actions.
     with open(DATA_DIR / "_ultima_corrida.json", "w", encoding="utf-8") as f:
         json.dump({"fecha": HOY, "resultados": resumen}, f, ensure_ascii=False, indent=2)
+
+    # Y una versión corta y liviana (sin los detalles técnicos largos), que
+    # es la que conviene abrir para ver de un vistazo cómo salió cada uno.
+    corto = {
+        "fecha": HOY,
+        "andan": [r["id"] for r in resumen if r["ok"]],
+        "fallan": {r["id"]: r["mensaje"][:220] for r in resumen if not r["ok"]},
+        "sin_verificar": [r["id"] for r in resumen if r.get("verificacion_relajada")],
+    }
+    with open(DATA_DIR / "resumen.json", "w", encoding="utf-8") as f:
+        json.dump(corto, f, ensure_ascii=False, indent=2)
 
     fallidos = [r for r in resumen if not r["ok"]]
     relajados = [r for r in resumen if r.get("verificacion_relajada")]
