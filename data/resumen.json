@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-08-31 16:14:53 UTC",
+  "fecha": "2026-09-01 12:10:48 UTC",
   "andan": [
     "inflacion_ipc",
     "ui",
@@ -18,7 +18,7 @@
     "tasa_politica_monetaria": "NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name=\"ctl00$ContentPlaceHolder1$dateDesde$dateInput\"]\"}\n  (Session info: chrome=151.0.7922.173); For docum",
     "expectativas_inflacion": "Fallo tambien sin verificar -> UnboundLocalError: cannot access local variable 'raw' where it is not associated with a value",
     "deuda_publica": "KeyError: '9. Deuda Bruta del Sector Público no monetario por plazo y  moneda.'",
-    "riesgo_pais": "ReadTimeoutError: HTTPConnectionPool(host='localhost', port=51909): Read timed out. (read timeout=120)"
+    "riesgo_pais": "ReadTimeoutError: HTTPConnectionPool(host='localhost', port=56571): Read timed out. (read timeout=120)"
   },
   "sin_verificar": [
     "inflacion_ipc",
