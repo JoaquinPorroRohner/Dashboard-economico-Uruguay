@@ -7,14 +7,14 @@
   "fuente_organismo": "INE",
   "fuente_url": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/SERIES%20Y%20OTROS/IPC/Base%20Octubre%202022=100/IPC%20general_Total%20Pais_Montevideo_Interior_base%202022.xlsx",
   "nota": "",
-  "ultima_actualizacion": "2026-09-03 12:10:51 UTC",
+  "ultima_actualizacion": "2026-09-04 12:10:32 UTC",
   "certificado_verificado": false,
   "estado_actual": {
     "estado": "Normal",
-    "z_score": -0.92,
-    "variacion_periodo_pct": 0.07,
-    "variacion_interanual_pct": 4.27,
-    "variacion_interanual_abs": 4.8362
+    "z_score": -0.62,
+    "variacion_periodo_pct": 0.24,
+    "variacion_interanual_pct": 4.55,
+    "variacion_interanual_abs": 5.1588
   },
   "historial": [
     {
@@ -956,6 +956,11 @@
       "fecha": "1953-02-28",
       "valor": 118.2034,
       "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "1953-03-31",
+      "valor": 118.4879,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
     }
   ]
 }

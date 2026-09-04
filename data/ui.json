@@ -7,14 +7,14 @@
   "fuente_organismo": "INE",
   "fuente_url": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/SERIES%20Y%20OTROS/UI/Unidad%20Indexada.xls",
   "nota": "",
-  "ultima_actualizacion": "2026-09-03 12:10:51 UTC",
+  "ultima_actualizacion": "2026-09-04 12:10:32 UTC",
   "certificado_verificado": false,
   "estado_actual": {
     "estado": "Normal",
-    "z_score": -0.86,
-    "variacion_periodo_pct": 0.0,
-    "variacion_interanual_pct": 0.03,
-    "variacion_interanual_abs": 0.0018
+    "z_score": -0.6,
+    "variacion_periodo_pct": 0.01,
+    "variacion_interanual_pct": 0.09,
+    "variacion_interanual_abs": 0.0063
   },
   "historial": [
     {
@@ -44331,6 +44331,156 @@
       "fecha": "2026-09-05",
       "valor": 6.6378,
       "fecha_incorporado": "2026-08-31 12:51:38 UTC"
+    },
+    {
+      "fecha": "2026-09-06",
+      "valor": 6.6383,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-07",
+      "valor": 6.6389,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-08",
+      "valor": 6.6394,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-09",
+      "valor": 6.6399,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-10",
+      "valor": 6.6405,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-11",
+      "valor": 6.641,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-12",
+      "valor": 6.6415,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-13",
+      "valor": 6.642,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-14",
+      "valor": 6.6426,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-15",
+      "valor": 6.6431,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-16",
+      "valor": 6.6436,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-17",
+      "valor": 6.6442,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-18",
+      "valor": 6.6447,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-19",
+      "valor": 6.6452,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-20",
+      "valor": 6.6458,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-21",
+      "valor": 6.6463,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-22",
+      "valor": 6.6468,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-23",
+      "valor": 6.6474,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-24",
+      "valor": 6.6479,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-25",
+      "valor": 6.6484,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-26",
+      "valor": 6.6489,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-27",
+      "valor": 6.6495,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-28",
+      "valor": 6.65,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-29",
+      "valor": 6.6505,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-09-30",
+      "valor": 6.6511,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-10-01",
+      "valor": 6.6516,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-10-02",
+      "valor": 6.6521,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-10-03",
+      "valor": 6.6527,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-10-04",
+      "valor": 6.6532,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
+    },
+    {
+      "fecha": "2026-10-05",
+      "valor": 6.6537,
+      "fecha_incorporado": "2026-09-04 12:10:32 UTC"
     }
   ]
 }
