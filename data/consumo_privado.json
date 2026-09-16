@@ -7,14 +7,14 @@
   "fuente_organismo": "BCU",
   "fuente_url": "https://www.bcu.gub.uy/Estadisticas-e-Indicadores/Cuentas%20Nacionales/1.%20Gasto_K.xlsx",
   "nota": "",
-  "ultima_actualizacion": "2026-09-15 12:10:08 UTC",
+  "ultima_actualizacion": "2026-09-16 12:10:33 UTC",
   "certificado_verificado": true,
   "estado_actual": {
     "estado": "Normal",
-    "z_score": -0.08,
-    "variacion_periodo_pct": 0.1,
-    "variacion_interanual_pct": 6.76,
-    "variacion_interanual_abs": 19589.5901
+    "z_score": -0.58,
+    "variacion_periodo_pct": -1.87,
+    "variacion_interanual_pct": 4.93,
+    "variacion_interanual_abs": 14238.4362
   },
   "historial": [
     {
@@ -221,6 +221,11 @@
       "fecha": "2026-03-31",
       "valor": 309311.4349,
       "fecha_incorporado": "2026-08-30 17:25:59 UTC"
+    },
+    {
+      "fecha": "2026-06-30",
+      "valor": 303074.7387,
+      "fecha_incorporado": "2026-09-16 12:10:33 UTC"
     }
   ]
 }
