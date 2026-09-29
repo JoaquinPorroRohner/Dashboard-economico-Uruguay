@@ -7,14 +7,14 @@
   "fuente_organismo": "INE",
   "fuente_url": "https://www5.ine.gub.uy/documents/Demograf%C3%ADayEESS/SERIES%20Y%20OTROS/ECH/Series%20hist%C3%B3ricas/Actividad,%20empleo%20y%20desempleo/ECH0103.xlsx",
   "nota": "",
-  "ultima_actualizacion": "2026-09-28 12:10:16 UTC",
+  "ultima_actualizacion": "2026-09-29 12:11:07 UTC",
   "certificado_verificado": true,
   "estado_actual": {
     "estado": "Normal",
-    "z_score": 0.01,
-    "variacion_periodo_pct": 0.15,
-    "variacion_interanual_pct": 1.97,
-    "variacion_interanual_abs": 0.1355
+    "z_score": 0.27,
+    "variacion_periodo_pct": 2.17,
+    "variacion_interanual_pct": 2.33,
+    "variacion_interanual_abs": 0.1631
   },
   "historial": [
     {
@@ -1251,6 +1251,11 @@
       "fecha": "2026-07-31",
       "valor": 7.0096,
       "fecha_incorporado": "2026-08-31 15:36:42 UTC"
+    },
+    {
+      "fecha": "2026-08-31",
+      "valor": 7.1617,
+      "fecha_incorporado": "2026-09-29 12:11:07 UTC"
     }
   ]
 }
