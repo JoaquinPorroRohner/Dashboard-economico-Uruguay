@@ -1,0 +1,656 @@
+{
+  "id": "imae",
+  "nombre": "IMAE (actividad económica mensual)",
+  "categoria": "Actividad",
+  "unidad": "Índice (2016=100)",
+  "fuente_tipo": "oficial",
+  "fuente_organismo": "BCU",
+  "fuente_url": "https://www.bcu.gub.uy/Estadisticas-e-Indicadores/Paginas/Informe-del-Indicador-Mensual-de-Actividad-Economica-(IMAE).aspx",
+  "nota": "",
+  "ultima_actualizacion": "2026-10-10 16:51:14 UTC",
+  "certificado_verificado": true,
+  "estado_actual": {
+    "estado": "Atención",
+    "z_score": -1.07,
+    "variacion_periodo_pct": -4.14,
+    "variacion_interanual_pct": 1.66,
+    "variacion_interanual_abs": 1.796
+  },
+  "historial": [
+    {
+      "fecha": "2016-01-31",
+      "valor": 96.511,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-02-29",
+      "valor": 97.506,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-03-31",
+      "valor": 97.436,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-04-30",
+      "valor": 97.412,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-05-31",
+      "valor": 103.021,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-06-30",
+      "valor": 101.766,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-07-31",
+      "valor": 97.588,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-08-31",
+      "valor": 96.239,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-09-30",
+      "valor": 96.68,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-10-31",
+      "valor": 96.657,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-11-30",
+      "valor": 108.532,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2016-12-31",
+      "valor": 110.652,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-01-31",
+      "valor": 103.737,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-02-28",
+      "valor": 99.099,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-03-31",
+      "valor": 99.805,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-04-30",
+      "valor": 99.711,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-05-31",
+      "valor": 105.202,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-06-30",
+      "valor": 101.135,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-07-31",
+      "valor": 96.797,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-08-31",
+      "valor": 99.07,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-09-30",
+      "valor": 99.11,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-10-31",
+      "valor": 99.603,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-11-30",
+      "valor": 106.127,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2017-12-31",
+      "valor": 111.488,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-01-31",
+      "valor": 103.473,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-02-28",
+      "valor": 99.63,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-03-31",
+      "valor": 98.88,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-04-30",
+      "valor": 99.325,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-05-31",
+      "valor": 103.663,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-06-30",
+      "valor": 103.033,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-07-31",
+      "valor": 99.511,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-08-31",
+      "valor": 98.783,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-09-30",
+      "valor": 96.671,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-10-31",
+      "valor": 104.524,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-11-30",
+      "valor": 106.55,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2018-12-31",
+      "valor": 108.852,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-01-31",
+      "valor": 103.831,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-02-28",
+      "valor": 99.853,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-03-31",
+      "valor": 98.546,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-04-30",
+      "valor": 103.785,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-05-31",
+      "valor": 107.362,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-06-30",
+      "valor": 102.058,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-07-31",
+      "valor": 101.171,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-08-31",
+      "valor": 100.822,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-09-30",
+      "valor": 98.648,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-10-31",
+      "valor": 101.258,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-11-30",
+      "valor": 107.371,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2019-12-31",
+      "valor": 109.544,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-01-31",
+      "valor": 102.808,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-02-29",
+      "valor": 98.992,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-03-31",
+      "valor": 91.967,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-04-30",
+      "valor": 85.042,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-05-31",
+      "valor": 89.815,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-06-30",
+      "valor": 92.111,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-07-31",
+      "valor": 92.731,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-08-31",
+      "valor": 92.477,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-09-30",
+      "valor": 94.127,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-10-31",
+      "valor": 96.884,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-11-30",
+      "valor": 101.273,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2020-12-31",
+      "valor": 105.215,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-01-31",
+      "valor": 95.797,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-02-28",
+      "valor": 90.925,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-03-31",
+      "valor": 96.753,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-04-30",
+      "valor": 95.406,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-05-31",
+      "valor": 101.5,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-06-30",
+      "valor": 102.443,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-07-31",
+      "valor": 101.18,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-08-31",
+      "valor": 99.288,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-09-30",
+      "valor": 100.334,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-10-31",
+      "valor": 101.68,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-11-30",
+      "valor": 111.15,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2021-12-31",
+      "valor": 113.812,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-01-31",
+      "valor": 104.527,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-02-28",
+      "valor": 101.737,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-03-31",
+      "valor": 102.234,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-04-30",
+      "valor": 104.638,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-05-31",
+      "valor": 111.094,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-06-30",
+      "valor": 109.766,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-07-31",
+      "valor": 103.18,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-08-31",
+      "valor": 102.656,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-09-30",
+      "valor": 101.505,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-10-31",
+      "valor": 102.452,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-11-30",
+      "valor": 107.74,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2022-12-31",
+      "valor": 114.485,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-01-31",
+      "valor": 108.307,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-02-28",
+      "valor": 101.861,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-03-31",
+      "valor": 104.338,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-04-30",
+      "valor": 102.502,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-05-31",
+      "valor": 106.981,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-06-30",
+      "valor": 108.531,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-07-31",
+      "valor": 102.37,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-08-31",
+      "valor": 104.423,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-09-30",
+      "valor": 101.527,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-10-31",
+      "valor": 107.445,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-11-30",
+      "valor": 113.692,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2023-12-31",
+      "valor": 113.682,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-01-31",
+      "valor": 107.971,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-02-29",
+      "valor": 104.399,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-03-31",
+      "valor": 102.798,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-04-30",
+      "valor": 109.509,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-05-31",
+      "valor": 113.896,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-06-30",
+      "valor": 109.86,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-07-31",
+      "valor": 106.292,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-08-31",
+      "valor": 107.611,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-09-30",
+      "valor": 107.13,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-10-31",
+      "valor": 113.921,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-11-30",
+      "valor": 119.221,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2024-12-31",
+      "valor": 115.475,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-01-31",
+      "valor": 111.988,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-02-28",
+      "valor": 108.024,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-03-31",
+      "valor": 107.675,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-04-30",
+      "valor": 112.202,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-05-31",
+      "valor": 115.495,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-06-30",
+      "valor": 113.23,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-07-31",
+      "valor": 108.092,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-08-31",
+      "valor": 107.308,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-09-30",
+      "valor": 108.74,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-10-31",
+      "valor": 112.356,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-11-30",
+      "valor": 118.016,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2025-12-31",
+      "valor": 118.482,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-01-31",
+      "valor": 112.933,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-02-28",
+      "valor": 107.772,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-03-31",
+      "valor": 110.345,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-04-30",
+      "valor": 110.698,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-05-31",
+      "valor": 113.938,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-06-30",
+      "valor": 114.637,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-07-31",
+      "valor": 109.888,
+      "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    }
+  ]
+}
