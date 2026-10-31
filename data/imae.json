@@ -7,14 +7,14 @@
   "fuente_organismo": "BCU",
   "fuente_url": "https://www.bcu.gub.uy/Estadisticas-e-Indicadores/Paginas/Informe-del-Indicador-Mensual-de-Actividad-Economica-(IMAE).aspx",
   "nota": "",
-  "ultima_actualizacion": "2026-10-30 17:39:02 UTC",
+  "ultima_actualizacion": "2026-10-31 16:43:09 UTC",
   "certificado_verificado": true,
   "estado_actual": {
-    "estado": "Atención",
-    "z_score": -1.07,
-    "variacion_periodo_pct": -4.14,
-    "variacion_interanual_pct": 1.66,
-    "variacion_interanual_abs": 1.796
+    "estado": "Normal",
+    "z_score": -0.46,
+    "variacion_periodo_pct": -1.69,
+    "variacion_interanual_pct": 0.77,
+    "variacion_interanual_abs": 0.825
   },
   "historial": [
     {
@@ -651,6 +651,11 @@
       "fecha": "2026-07-31",
       "valor": 109.888,
       "fecha_incorporado": "2026-10-10 16:51:14 UTC"
+    },
+    {
+      "fecha": "2026-08-31",
+      "valor": 108.133,
+      "fecha_incorporado": "2026-10-31 16:43:09 UTC"
     }
   ]
 }
