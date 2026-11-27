@@ -7,14 +7,14 @@
   "fuente_organismo": "BCU",
   "fuente_url": "https://www.bcu.gub.uy/Estadisticas-e-Indicadores/Indice_Cambio_Real/TCRE.xls",
   "nota": "",
-  "ultima_actualizacion": "2026-11-26 20:51:30 UTC",
+  "ultima_actualizacion": "2026-11-27 20:36:44 UTC",
   "certificado_verificado": true,
   "estado_actual": {
     "estado": "Normal",
-    "z_score": 0.08,
-    "variacion_periodo_pct": 0.07,
-    "variacion_interanual_pct": 6.12,
-    "variacion_interanual_abs": 5.3645
+    "z_score": -0.19,
+    "variacion_periodo_pct": -0.6,
+    "variacion_interanual_pct": 6.26,
+    "variacion_interanual_abs": 5.4449
   },
   "historial": [
     {
@@ -1621,6 +1621,11 @@
       "fecha": "2026-09-30",
       "valor": 92.9958,
       "fecha_incorporado": "2026-10-28 17:49:15 UTC"
+    },
+    {
+      "fecha": "2026-10-31",
+      "valor": 92.4393,
+      "fecha_incorporado": "2026-11-27 20:36:44 UTC"
     }
   ]
 }
